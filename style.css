@@ -7,15 +7,20 @@
    ROOT VARIABLES
 ========================= */
 :root{
-    --primary:#4F46E5;
-    --secondary:#06B6D4;
-    --accent:#8B5CF6;
-    --dark:#0F172A;
-    --dark2:#1E293B;
-    --text:#CBD5E1;
-    --glass:rgba(255,255,255,0.06);
-    --border:rgba(255,255,255,0.12);
-    --shadow:0 10px 30px rgba(0,0,0,0.3);
+    --primary:#A8D5BA;      /* Soft Green */
+    --secondary:#AFCBFF;    /* Light Blue */
+    --accent:#8AA06B;       /* Olive Green */
+
+    --dark:#355E3B;         /* Heading Color */
+    --dark2:#5F7A5A;
+
+    --white:#FFFFFF;
+    --text:#4A5D4A;
+
+    --glass:rgba(255,255,255,0.65);
+    --border:rgba(95,122,90,0.20);
+
+    --shadow:0 8px 25px rgba(0,0,0,0.10);
 }
 
 /* =========================
@@ -33,8 +38,17 @@ html{
 }
 
 body{
-    background:linear-gradient(135deg, #0F172A, #1E293B, #111827);
-    color:white;
+    font-family:'Poppins',sans-serif;
+
+    background:linear-gradient(
+        135deg,
+        #F8F7F2,
+        #DDF4E7,
+        #DCEBFF
+    );
+
+    color:var(--dark);
+
     overflow-x:hidden;
 }
 
@@ -49,7 +63,7 @@ body{
     justify-content:space-between;
     align-items:center;
     padding:18px 8%;
-    background:rgba(15,23,42,0.75);
+    background:rgba(255,255,255,.90);
     backdrop-filter:blur(15px);
     z-index:1000;
 }
@@ -57,6 +71,16 @@ body{
 .logo{
     font-size:26px;
     font-weight:700;
+}
+
+.logo{
+    color:var(--dark);
+}
+
+.logo{
+    font-size:28px;
+    font-weight:700;
+    color:#355E3B;
 }
 
 .logo i{
@@ -72,8 +96,8 @@ body{
 
 .nav-links a{
     text-decoration:none;
-    color:white;
-    transition:0.3s;
+    color:#355E3B;
+    transition:.3s;
     font-weight:500;
 }
 
@@ -86,6 +110,7 @@ body{
     display:none;
     font-size:24px;
     cursor:pointer;
+     color:#355E3B;
 }
 
 /* =========================
@@ -407,5 +432,40 @@ footer{
     font-size:1rem;
     font-weight:700;
     letter-spacing:1px;
+}
+.about,
+.vision{
+    text-align:center;
+    max-width:900px;
+    margin:auto;
+}
+
+.about p,
+.vision p{
+    color:var(--text);
+    line-height:1.8;
+}
+
+.roadmap-grid{
+    display:flex;
+    justify-content:center;
+    gap:20px;
+    flex-wrap:wrap;
+}
+
+.road-step{
+    background:white;
+    color:#5F7A5A;
+    padding:20px 30px;
+    border-radius:15px;
+    font-weight:700;
+    box-shadow:0 5px 15px rgba(0,0,0,.1);
+}
+.hero-content h1{
+    color:var(--dark);
+}
+
+.hero-content p{
+    color:var(--text);
 }
 }
