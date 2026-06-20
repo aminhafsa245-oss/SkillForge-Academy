@@ -7,20 +7,20 @@
    ROOT VARIABLES
 ========================= */
 :root{
-    --primary:#A8D5BA;      /* Soft Green */
-    --secondary:#AFCBFF;    /* Light Blue */
-    --accent:#8AA06B;       /* Olive Green */
+    --primary:#B6947A;
+    --secondary:#D9C3B0;
+    --accent:#C2A48F;
 
-    --dark:#355E3B;         /* Heading Color */
-    --dark2:#5F7A5A;
+    --dark:#1E1E1E;
+    --text:#6B6B6B;
 
     --white:#FFFFFF;
-    --text:#4A5D4A;
+    --bg:#F7F5F2;
 
-    --glass:rgba(255,255,255,0.65);
-    --border:rgba(95,122,90,0.20);
+    --glass:#FFFFFF;
+    --border:#E8E1DA;
 
-    --shadow:0 8px 25px rgba(0,0,0,0.10);
+    --shadow:0 10px 25px rgba(0,0,0,.08);
 }
 
 /* =========================
@@ -39,53 +39,32 @@ html{
 
 body{
     font-family:'Poppins',sans-serif;
-
-    background:linear-gradient(
-        135deg,
-        #F8F7F2,
-        #DDF4E7,
-        #DCEBFF
-    );
-
+    background:#F8F6F3;
     color:var(--dark);
-
     overflow-x:hidden;
 }
+   
 
 /* =========================
    NAVBAR
 ========================= */
 .navbar{
     position:fixed;
-    top:0;
     width:100%;
-    display:flex;
-    justify-content:space-between;
-    align-items:center;
-    padding:18px 8%;
-    background:rgba(255,255,255,.90);
-    backdrop-filter:blur(15px);
-    z-index:1000;
+    background:rgba(15,23,42,.85);
+    box-shadow:0 2px 15px rgba(0,0,0,.08);
+    backdrop-filter:blur(10px);
 }
 
+
 .logo{
-    font-size:26px;
+    color:#ffffff;
     font-weight:700;
 }
 
-.logo{
-    color:var(--dark);
-}
-
-.logo{
-    font-size:28px;
-    font-weight:700;
-    color:#355E3B;
-}
-
-.logo i{
-    color:var(--secondary);
-    margin-right:6px;
+.logo i
+{
+    color:#A8D5BA;
 }
 
 .nav-links{
@@ -95,22 +74,22 @@ body{
 }
 
 .nav-links a{
-    text-decoration:none;
-    color:#355E3B;
-    transition:.3s;
+    color:#ffffff;
     font-weight:500;
 }
 
-.nav-links a:hover{
-    color:var(--secondary);
+.nav-links a:hover
+{
+    color:#A8D5BA;
 }
+
 
 /* Mobile Menu */
 .menu-btn{
     display:none;
     font-size:24px;
     cursor:pointer;
-     color:#355E3B;
+    color:#ffffff;
 }
 
 /* =========================
@@ -136,9 +115,9 @@ body{
 }
 
 .hero-content h1{
-    font-size:3.5rem;
-    line-height:1.2;
-    margin-bottom:20px;
+    color:var(--dark);
+    font-size:4rem;
+    font-weight:800;
 }
 
 .hero-content p{
@@ -163,29 +142,30 @@ body{
 }
 
 .btn-primary{
-    background:linear-gradient(135deg, var(--primary), var(--accent));
+    background:#B6947A;
     color:white;
+    border-radius:50px;
 }
 
 .btn-primary:hover{
-    transform:translateY(-4px);
-    box-shadow:var(--shadow);
+    transform:translateY(-3px);
 }
 
 .btn-secondary{
-    border:1px solid var(--border);
-    color:white;
+    border:2px solid #B6947A;
+    color:#B6947A;
+    border-radius:50px;
 }
-
 .btn-secondary:hover{
     background:var(--glass);
 }
 
 /* Hero Image */
 .hero-image img{
-    width:100%;
-    max-width:450px;
-    border-radius:20px;
+    width:450px;
+    height:320px;
+    object-fit:cover;
+    border-radius:35px;
     box-shadow:var(--shadow);
 }
 
@@ -262,21 +242,23 @@ section{
 .program-card,
 .feature-card,
 .internship-card,
-.partner-box{
-    background:var(--glass);
-    border:1px solid var(--border);
-    padding:25px;
+.testimonial-card{
+
+    background:#fff;
+
+    border:none;
+
+    box-shadow:0 8px 20px rgba(0,0,0,.08);
+
     border-radius:20px;
-    transition:0.3s;
-    backdrop-filter:blur(10px);
+
+    transition:.3s;
 }
 
 .program-card:hover,
 .feature-card:hover,
-.internship-card:hover,
-.partner-box:hover{
+.internship-card:hover{
     transform:translateY(-8px);
-    box-shadow:var(--shadow);
 }
 
 .program-card i,
@@ -316,8 +298,8 @@ section{
    FOOTER
 ========================= */
 footer{
-    background:#020617;
-    padding:50px 8%;
+    background:#EFEAE4;
+    color:#333;
     text-align:center;
 }
 
@@ -396,8 +378,8 @@ hr{
 /* Footer */
 
 footer{
-    background:#020617;
-    padding:50px 8%;
+    background:#EFEAE4;
+    color:#333;
 }
 
 /* Existing footer CSS yahan tak */
@@ -468,4 +450,9 @@ footer{
 .hero-content p{
     color:var(--text);
 }
+
+section{
+    padding:60px 8%;
+}
+
 }
